@@ -2,9 +2,10 @@ pipeline {
     agent any
 
     stages {
+
         stage('Clone Repo') {
             steps {
-                git url: 'https://github.com/uday862/jenkin.git'
+                git branch: 'main', url: 'https://github.com/uday862/jenkin.git'
             }
         }
 
@@ -27,3 +28,4 @@ pipeline {
         }
     }
 }
+
